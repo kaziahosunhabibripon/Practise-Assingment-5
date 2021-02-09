@@ -58,14 +58,16 @@ const displaySingleFoodItem = food => {
             <h4 class='text-center'>${food.strMeal}</h4>
             <h3 class='text-center'>Ingredients</h3> 
             <ul class='text-center' id="ing-list">
-                <li> ${food.strIngredient1} </li>
-                <li> ${food.strIngredient2} </li>
-                <li> ${food.strIngredient3} </li>
-                <li> ${food.strIngredient4} </li>
-                <li> ${food.strIngredient5} </li>
-                <li> ${food.strIngredient6} </li>
+                
             </ul>
-        </div>`
+        </div>
+        `
+        for(let i=1; i<21; i++){
+            const ingredients = `strIngredient${i}`;
+            const li = document.createElement("li");
+            li.innerText = food[ingredients];
+            document.getElementById("ing-list").appendChild(li);
+        }
         document.getElementById("display-error").value= ''; 
     }
 const displayError = error=> {

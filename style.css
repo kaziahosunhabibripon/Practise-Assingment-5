@@ -24,12 +24,13 @@
 .col{
    margin: 0 300px; 
 }
-.col ul li{
+.col li{
     color: #F06C4E;
     list-style-type:none;
     margin-left: 270px;
     text-align: left;
-    font-size: larger;
+    font-size: 20px;
+   
 }
 .row img {
     margin-bottom: 3%;  
@@ -58,14 +59,15 @@
 
 #hideSingleMillsDetails h3, h4{
     text-align: left;
-    margin-left: 7%;
+    margin-left: 8%;
 }
 
 .col li:before{
     content: '';
     /* display: inline-block; */
-    right: 1.5rem;
-    top: 7px;
+    right: 1rem;
+    
+    top: 15px;
     height: 24px;
     width: 24px;
     background-image: url('list.png');
