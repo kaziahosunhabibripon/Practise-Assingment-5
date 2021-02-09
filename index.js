@@ -5,11 +5,14 @@ const searchFoodItem = async() => {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        displayFoods(data.meals);      
+        displayFoods(data.meals);   
+        document.getElementById("search-meal").value= '';   
     }
     catch(error){
         displayError("Sorry the food item you are looking is not available!"); 
+        
     } 
+   
        
 }
 
@@ -63,9 +66,11 @@ const displaySingleFoodItem = food => {
                 <li> ${food.strIngredient6} </li>
             </ul>
         </div>`
+        document.getElementById("display-error").value= ''; 
     }
 const displayError = error=> {
     const errorTag = document.getElementById("display-error");
-    errorTag.innerHTML= error;     
-    }
+    errorTag.innerHTML= error;    
+    document.getElementById("single-FoodItem").innerHTML = '';
+}
 
